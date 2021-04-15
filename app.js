@@ -1,7 +1,11 @@
 const express = require('express')
 const app = express()
 const mongoose = require('mongoose')
+const bodyParser = require('body-parser')
 require('dotenv/config')
+
+// MIDDLEWARE
+app.use(bodyParser.json())
 
 // ENDPOINTS
 const weaponsEndpoint = require('./endpoints/weapons')

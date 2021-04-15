@@ -1,8 +1,8 @@
 const mongoose = require('mongoose')
 
-const Weapon = mongoose.Schema({
-  title: String,
+const schema = mongoose.Schema({
+  name: String,
   description: String
 })
 
-module.exports = Weapon
+module.exports = mongoose.model('Weapon', schema)
