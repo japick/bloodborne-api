@@ -8,7 +8,7 @@ require('dotenv/config')
 app.use(bodyParser.json())
 
 // ENDPOINTS
-const trickWeaponsEndpoint = require('./endpoints/trickWeapons')
+const trickWeaponsEndpoint = require('./routes/trickWeapons')
 // const firearmsEndpoint = require('./endpoints/firearms')
 
 app.use('/trick-weapons', trickWeaponsEndpoint)
