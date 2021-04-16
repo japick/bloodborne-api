@@ -8,14 +8,11 @@ require('dotenv/config')
 app.use(bodyParser.json())
 
 // ENDPOINTS
-const weaponsEndpoint = require('./endpoints/weapons')
+const trickWeaponsEndpoint = require('./endpoints/trickWeapons')
+// const firearmsEndpoint = require('./endpoints/firearms')
 
-app.use('/weapons', weaponsEndpoint)
-
-// INDEX
-app.get('/', (req, res) => {
-  res.send('Bloodborne API')
-})
+app.use('/trick-weapons', trickWeaponsEndpoint)
+// app.use('/firearms', firearmsEndpoint)
 
 // CONNECT TO DB
 mongoose.connect(process.env.MONGO_URI, 

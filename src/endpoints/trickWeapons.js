@@ -1,12 +1,12 @@
 const express = require('express')
 const router = express.Router()
-const Weapon = require('../models/Weapon')
+const trickWeapon = require('../models/trickWeaponSchema')
 
 // RETURNS ALL WEAPONS
 router.get('/', async (req, res) => {
   // return data
   try {
-    const weapons = await Weapon.find()
+    const weapons = await trickWeapon.find()
     res.json(weapons)
   } catch(error) {
     res.json({ message: error })
@@ -15,11 +15,14 @@ router.get('/', async (req, res) => {
 
 // SUBMIT WEAPON
 router.post('/', async (req, res) => {
-  const weapon = new Weapon({
+  const weapon = new trickWeapon({
     name: req.body.name,
-    description: req.body.description
+    // needs all definitions here...
+    strength: {
+      base: req.body.strength.base,
+      bonus: req.body.strength.bonus
+    }
   })
-
   try {
     const savedWeapon = await weapon.save()
     res.json(savedWeapon)
