@@ -1,6 +1,7 @@
 const mongoose = require('mongoose')
+const Schema = mongoose.Schema
 
-const trickWeaponSchema = mongoose.Schema({
+const TrickWeaponSchema = new Schema({
   name: String,
   description: String,
   image: String,
@@ -94,6 +95,6 @@ const trickWeaponSchema = mongoose.Schema({
   }
 })
 
-const trickWeapon = mongoose.model('trickWeapon', trickWeaponSchema)
+const TrickWeapon = mongoose.model('trickWeapon', TrickWeaponSchema)
 
-module.exports = trickWeapon
+module.exports = TrickWeapon
