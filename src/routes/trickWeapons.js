@@ -36,7 +36,10 @@ router.post('/', async (req, res) => {
       base: req.body.skill.base,
       bonus: req.body.skill.bonus
     },
-    bloodtinge: req.body.bloodtinge,
+    bloodtinge: {
+      base: req.body.bloodtinge.base,
+    	bonus: req.body.bloodtinge.bonus
+    },
     arcane: {
     	base: req.body.arcane.base,
     	bonus: req.body.arcane.bonus

@@ -1,4 +1,5 @@
 const express = require('express')
+const serverless = require('serverless-http')
 const app = express()
 const mongoose = require('mongoose')
 const bodyParser = require('body-parser')
@@ -9,10 +10,10 @@ app.use(bodyParser.json())
 
 // ENDPOINTS
 const trickWeaponsEndpoint = require('./routes/trickWeapons')
-// const firearmsEndpoint = require('./endpoints/firearms')
+// const firearmsEndpoint = require('./routes/firearms')
 
-app.use('/trick-weapons', trickWeaponsEndpoint)
-// app.use('/firearms', firearmsEndpoint)
+app.use('/.netlify/functions/api/trick-weapons', trickWeaponsEndpoint)
+// app.use('/.netlify/functions/api/firearms', firearmsEndpoint)
 
 // CONNECT TO DB
 mongoose.connect(process.env.MONGO_URI, 
@@ -24,4 +25,4 @@ mongoose.connect(process.env.MONGO_URI,
     console.log('connected to db!')
 })
 
-app.listen(3000)
+module.exports.handler = serverless(app)

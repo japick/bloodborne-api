@@ -49,8 +49,8 @@ const trickWeaponSchema = mongoose.Schema({
     bonus: Array
   },
   bloodtinge: {
-    type: Number,
-    default: null
+    base: Number,
+    bonus: Array
   },
   arcane: {
     base: Number,
