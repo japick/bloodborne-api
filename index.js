@@ -23,6 +23,6 @@ app.use((err, req, res, next) => {
 })
 
 // listen for requests
-app.listen(process.env.port || 9000, () => {
+app.listen(process.env.PORT || 9000, () => {
   console.log('listening for requests...')
 })
