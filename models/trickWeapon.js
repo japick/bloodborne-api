@@ -42,20 +42,44 @@ const TrickWeaponSchema = new Schema({
     default: null
   },
   strength: {
-    base: Number,
-    bonus: Array
+    base: {
+      type: Number, 
+      default: null
+    },
+    bonus: { 
+      type: Array,
+      default: null
+    }
   },
   skill: {
-    base: Number,
-    bonus: Array
+    base: {
+      type: Number, 
+      default: null
+    },
+    bonus: { 
+      type: Array,
+      default: null
+    }
   },
   bloodtinge: {
-    base: Number,
-    bonus: Array
+    base: {
+      type: Number, 
+      default: null
+    },
+    bonus: { 
+      type: Array,
+      default: null
+    }
   },
   arcane: {
-    base: Number,
-    bonus: Array
+    base: {
+      type: Number, 
+      default: null
+    },
+    bonus: { 
+      type: Array,
+      default: null
+    }
   },
   durability: {
     type: Number,

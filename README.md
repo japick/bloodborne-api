@@ -3,10 +3,6 @@ RESTful API providing a series of JSON endpoints as listed below.
 
 ### Endpoints
 - [/trick-weapons](https://bloodbornev1.herokuapp.com/api/trick-weapons)
-- [/trick-weapons/:id](#)
-- [/firearms](https://bloodbornev1.herokuapp.com/api/firearms)
-- [/runes](https://bloodbornev1.herokuapp.com/api/runes)
-- [/bosses](https://bloodbornev1.herokuapp.com/api/bosses)
 
 ### Example usage
 Retrieve all trick weapons using `async await`:
@@ -20,11 +16,6 @@ async function fetchTrickWeapons() {
 fetchTrickWeapons().then(weapons => {
   weapons // do your thing...
 })
-```
-
-Retrieve specific item by id:
-```
-const response = await fetch(https://bloodbornev1.herokuapp.com/api/bosses/${id})
 ```
 
 ### Disclaimer
