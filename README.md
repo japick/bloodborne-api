@@ -2,7 +2,8 @@
 RESTful API providing a series of JSON endpoints as listed below. 
 
 ### Endpoints
-- [/trick-weapons](https://bloodbornev1.herokuapp.com/api/trick-weapons)
+- <a href="https://bloodbornev1.herokuapp.com/api/trick-weapons" target="_blank">/trick-weapons</a>
+- <a href="https://bloodbornev1.herokuapp.com/api/consumables" target="_blank">/consumables</a>
 
 ### Example usage
 Retrieve all trick weapons using `async await`:
