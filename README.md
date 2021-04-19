@@ -9,11 +9,22 @@ RESTful API providing a series of JSON endpoints as listed below.
 - [/bosses](https://bloodbornev1.herokuapp.com/api/bosses)
 
 ### Example usage
+Retrieve all trick weapons using `async await`:
 ```
 async function fetchTrickWeapons() {
   const response = await fetch('https://bloodbornev1.herokuapp.com/api/trick-weapons');
-  // do your thing...
+  const weapons = await response.json()
+  return weapons
 }
+
+fetchTrickWeapons().then(weapons => {
+  weapons // do your thing...
+})
+```
+
+Retrieve specific item by id:
+```
+const response = await fetch(https://bloodbornev1.herokuapp.com/api/bosses/${id})
 ```
 
 ### Disclaimer
