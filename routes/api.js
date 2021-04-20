@@ -1,7 +1,6 @@
 const express = require('express')
 const router = express.Router()
 const TrickWeapon = require('../models/trickWeapon')
-const Consumable = require('../models/consumables')
 
 // GET...
 // get a list of all trick weapons
